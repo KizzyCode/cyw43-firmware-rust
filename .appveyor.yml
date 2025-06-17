@@ -45,6 +45,7 @@ for:
       - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
       - rustup-init.exe -y --default-host "%PLATFORM%"
       - set PATH=%PATH%;C:\Users\appveyor\.cargo\bin
+      - git submodule update --init
     test_script:
       - cargo test --verbose --no-default-features %CONFIGURATION%
       - cargo test --verbose --release --no-default-features %CONFIGURATION%
@@ -59,6 +60,7 @@ for:
       - curl https://sh.rustup.rs -sSf -o rustup-init.sh
       - sh rustup-init.sh -y --default-host "$PLATFORM"
       - source $HOME/.cargo/env
+      - git submodule update --init
     test_script:
       - cargo test --verbose --no-default-features $CONFIGURATION
       - cargo test --verbose --release --no-default-features $CONFIGURATION
@@ -73,6 +75,7 @@ for:
       - curl https://sh.rustup.rs -sSf -o rustup-init.sh
       - sh rustup-init.sh -y --default-host "$PLATFORM"
       - source $HOME/.cargo/env
+      - git submodule update --init
     test_script:
       - cargo test --verbose --no-default-features $CONFIGURATION
       - cargo test --verbose --release --no-default-features $CONFIGURATION
