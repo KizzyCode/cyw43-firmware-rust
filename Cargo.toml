@@ -7,6 +7,7 @@ keywords = []
 categories = []
 description = "CYW43xx WiFi and Bluetooth Firmware Blobs"
 repository = "https://github.com/KizzyCode/cyw43-firmware-rust"
+license-file = "README.md"
 readme = "README.md"
 include = ["/src", "/dist/cyw43-firmware"]
 
