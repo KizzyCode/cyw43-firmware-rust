@@ -1,0 +1,33 @@
+[package]
+name = "cyw43-firmware"
+version = "0.1.0"
+edition = "2021"
+authors = ["KizzyCode Software Labs./Keziah Biermann <development@kizzycode.de>"]
+keywords = []
+categories = []
+description = "CYW43xx WiFi and Bluetooth Firmware Blobs"
+repository = "https://github.com/KizzyCode/cyw43-firmware-rust"
+readme = "README.md"
+include = ["/src", "/dist/cyw43-firmware"]
+
+
+[badges]
+appveyor = { repository = "KizzyCode/cyw43-firmware-rust" }
+
+
+[features]
+default = []
+wifi = []
+bluetooth = []
+
+
+[dependencies]
+
+[dev-dependencies]
+
+
+[profile.release]
+overflow-checks = true
+
+[profile.bench]
+overflow-checks = true
